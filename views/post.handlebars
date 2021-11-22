@@ -1,0 +1,19 @@
+
+{{> post-info}}
+{{#if loggedIn}}
+<div class='card'>
+
+    <form class='comment-form'>
+        <label class='form-lable'>Comment</label>
+        <input name='comment-body' class='form-input' id='comment'>
+        <button type='submit' class='btn'>Add Comment</button>
+        
+    </form>
+</div>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src='/js/comment.js'></script>
+{{/if}}
